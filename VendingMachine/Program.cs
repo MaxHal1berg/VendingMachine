@@ -96,8 +96,20 @@ internal class Program
                     }
                     break;
             case 6:
-                Console.WriteLine("wot");
-                break;
+                    Clothes shirt = new Clothes();
+                    Console.WriteLine("Dina skor har levererats! Vill du ta på dig dom? Tryck Y om du det, N om du ej vill det");
+                    string skjortSvar = Console.ReadLine();
+
+                    switch (skjortSvar)
+                    {
+                        case "Y":
+                            shirt.orderShirt();
+                            break;
+                        case "N":
+                            shirt.wearShirt();
+                            break;
+                    }
+                    break;
             case 7:
                 Console.WriteLine("f");
                 break;
