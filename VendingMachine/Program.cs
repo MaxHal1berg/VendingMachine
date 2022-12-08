@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Diagnostics.SymbolStore;
+using System.IO.Pipes;
+using System.Runtime.CompilerServices;
+using VendingMachine;
+
 internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Välkommen till Vending Machine V1.0.0");
 
         bool loop = true;
 
@@ -16,14 +21,50 @@ internal class Program
         switch (val)
         {
             case 1: 
-                Console.WriteLine("hello");
+                Drinks beer = new Drinks();
+                    Console.WriteLine("Din öl har blivit levererad! Vill du dricka ölen? Tryck Y om du vill dricka den, N om du ej vill dricka den");
+                    string ölSvar = Console.ReadLine();
+
+                    switch (ölSvar)
+                    {
+                        case "Y":
+                            beer.drunkenBeer();
+                            break;
+                        case "N":
+                            beer.drinkBeer();
+                            break;
+                    }
                 break;
-            case 2: 
-                Console.WriteLine("xd");
+            case 2:
+                    Drinks wine = new Drinks();
+                    Console.WriteLine("Ditt vin har levererats! Vill du dricka vinet? Tryck Y om du vill dricka den, N om du ej vill dricka det");
+                    string vinSvar = Console.ReadLine();
+
+                    switch (vinSvar)
+                    {
+                        case "Y":
+                            wine.drunkenWine();
+                            break;
+                        case "N":
+                            wine.drinkWine();
+                            break;
+                    }
                 break;
             case 3:
-                Console.WriteLine("dx");
-                break;
+                    Drinks spirits = new Drinks();
+                    Console.WriteLine("Din sprit har levererats! Vill du dricka spriten? Tryck Y om du vill dricka den, N om du ej vill dricka den");
+                    string spritSvar = Console.ReadLine();
+
+                    switch (spritSvar)
+                    {
+                        case "Y":
+                            spirits.drinksPirits();
+                            break;
+                        case "N":
+                            spirits.drunkensPirits();
+                            break;
+                    }
+                    break;
             case 4:
                 Console.WriteLine(":V");
                 break;
