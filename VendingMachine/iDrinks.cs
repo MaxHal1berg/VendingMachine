@@ -8,6 +8,7 @@ namespace VendingMachine
 {
     public interface iDrinks
     {
+        //Deklarerar metoder här i interface för att de ska kunna användas
         void drinkBeer();
         void drunkenBeer();
         void drinkWine();
@@ -18,6 +19,8 @@ namespace VendingMachine
 
     public class Drinks : iDrinks
     {
+        //Här är alla olika dryckklasser
+
         public void drinkBeer()
         {
             

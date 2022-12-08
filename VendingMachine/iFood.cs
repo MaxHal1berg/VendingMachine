@@ -8,6 +8,7 @@ namespace VendingMachine
 {
     public interface iFood
     {
+        //Deklarerar metoder här i interface för att de ska kunna användas
         public void orderPizza();
         public void eatPizza();
         public void orderBurger();
@@ -18,6 +19,7 @@ namespace VendingMachine
 
     public class Food : iFood 
     {
+        //Här är alla olika matklasser
         public void orderPizza()
         {
             Console.WriteLine("Du har beställt Pizza");

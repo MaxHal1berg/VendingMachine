@@ -8,6 +8,7 @@ namespace VendingMachine
 {
     public interface iClothes
     {
+        //Deklarerar metoder här i interface för att de ska kunna användas
         public void orderPants();
         public void wearPants();
         public void orderShoes();
@@ -18,6 +19,7 @@ namespace VendingMachine
 
     public class Clothes : iClothes
     {
+        //Här är alla olika klädklasser
         public void orderPants()
         {
             Console.WriteLine("Du har köpt byxor");
